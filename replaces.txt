@@ -1,0 +1,2 @@
+home-featured-products -> product-list
+home-module: product-page 

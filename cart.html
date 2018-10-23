@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FunBeauty</title>
+	<!-- My Css Library generic-->
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<!-- specific to this project -->
+	<link rel="stylesheet" type="text/css" href="theme.css">
+	<link rel="stylesheet" type="text/css" href="grid.css">
+	<link rel="stylesheet" type="text/css" href="cart.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+	<link href="https://unpkg.com/ionicons@4.1.1/dist/css/ionicons.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+	<!-- ============== Header ============== -->
+	<div class="headerWrap">
+		<div class="free_shipping">
+			<div class=" container flex-parent flex-center">
+				<p class="flex-child">
+					FREE STANDARD SHIPPING ON ORDERS $30+
+				</p>
+				<nav class="nav flex-none">
+					<ul class="flex-parent">
+						<li><a href="#">Log in</a></li>
+						<li><a href="#">Cart</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<header>
+			<div class="container flex-parent flex-center">
+				<img src="img/logo.png" class="logo">
+
+				<h1 class="flex-child">FunBeauty</h1>
+
+				<nav class="nav flex-none">
+					<ul class="flex-parent">
+						<li><a href="#">SHOP ALL</a></li>
+						<li><a href="#">BRANDS</a></li>
+						<li><a href="#">ABOUT US</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	</div>
+
+
+	<!-- ============== Basket List ============== -->
+
+	<div id="shopping_cart" class="clearfix">
+		<h2>Your Shopping Cart <i class="fa fa-shopping-cart"></i></h2>
+	<hr>
+	<div class="col-lg-12 grid gutter">
+		<ul>
+			<!-- each item of shopping cart -->
+			<li class="item-row">
+				<div class="shopping_cart_item cart_container">
+					<!-- item image -->
+					<div class="col-md-2">
+					<a href="TODO-item-link" title="">
+						<img class="cart-image" src="img/product1.png" alt="TODO-fill-in-name">
+					</a>
+					</div>
+
+					<!-- item description title and brand-->
+					<div class="product-desc col-md-3">
+					<ul>
+					<li class="product-title">
+						<a href="TODO-item-link">Coconut Cleansing Oil 1</a> 
+					</li>
+					<li class="brand">Victoria Secret</li>
+					<li class="remove">Remove</li>
+					</ul>
+					</div>
+
+					<!-- unit-price -->
+					<div class="unit-price col-md-2">
+						<span class="unit-price-text">121.35</span>
+					</div>
+
+					<!-- Quantity -->
+					<div class="quatity col-md-2">
+						<i class="fa fa-minus"></i>
+						<input class="qty-text" value=3 type="text" size="3"></input>
+						<i class="fa fa-plus"></i>
+					</div>
+
+					<!-- subtotal-price -->
+					<div class="subtotal-price col-md-2">
+						<span class="subtotal-price-text">364.05</span>
+					</div>
+
+				</div>
+			</li>
+
+			<!-- each item of shopping cart 2 -->
+			<li class="item-row">
+				<div class="shopping_cart_item cart_container">
+					<!-- item image -->
+					<div class="col-md-2">
+					<a href="TODO-item-link" title="">
+						<img class="cart-image" src="img/product2.png" alt="TODO-fill-in-name">
+					</a>
+					</div>
+
+					<!-- item description title and brand-->
+					<div class="product-desc col-md-3">
+					<ul>
+					<li class="product-title">
+						<a href="TODO-item-link">Coconut Cleansing Oil 1</a> 
+					</li>
+					<li class="brand">Victoria Secret</li>
+					<li class="remove">Remove</li>
+					</ul>
+					</div>
+
+					<!-- unit-price -->
+					<div class="unit-price col-md-2">
+						<span class="unit-price-text">50.00</span>
+					</div>
+
+					<!-- Quantity -->
+					<div class="quatity col-md-2">
+						<i class="fa fa-minus"></i>
+						<input class="qty-text" value=1 type="text" size="3"></input>
+						<i class="fa fa-plus"></i>
+					</div>
+
+					<!-- subtotal-price -->
+					<div class="subtotal-price col-md-2">
+						<span class="subtotal-price-text">50.00</span>
+					</div>
+
+				</div>
+			</li>
+
+			<!-- each item of shopping cart 3 -->
+			<li class="item-row">
+				<div class="shopping_cart_item cart_container">
+					<!-- item image -->
+					<div class="col-md-2">
+					<a href="TODO-item-link" title="">
+						<img class="cart-image" src="img/product3.png" alt="TODO-fill-in-name">
+					</a>
+					</div>
+
+					<!-- item description title and brand-->
+					<div class="product-desc col-md-3">
+					<ul>
+					<li class="product-title">
+						<a href="TODO-item-link">Coconut Cleansing Oil 1</a> 
+					</li>
+					<li class="brand">Victoria Secret</li>
+					<li class="remove">Remove</li>
+					</ul>
+					</div>
+
+					<!-- unit-price -->
+					<div class="unit-price col-md-2">
+						<span class="unit-price-text">20.50</span>
+					</div>
+
+					<!-- Quantity -->
+					<div class="quatity col-md-2">
+						<i class="fa fa-minus"></i>
+						<input class="qty-text" value=5 type="text" size="3"></input>
+						<i class="fa fa-plus"></i>
+					</div>
+
+					<!-- subtotal-price -->
+					<div class="subtotal-price col-md-2">
+						<span class="subtotal-price-text">102.5</span>
+					</div>
+
+				</div>
+			</li>
+
+
+		</ul>
+	</div>
+	<div class="checkoutcont">
+			<div class="checkout-partial-price">Subtotal $516.50 USD</div>
+			<div class="checkout-partial-price">Estimated Tax $36.42 USD </div>
+			<div class="checkout-total-price">Total Price $552.92 USD </div>
+			<input type="submit" id="pl-font-regular" class="button large" name="checkout" value="Checkout">
+	</div>
+	</div>
+
+
+	<!-- ============== Our Story ============== -->
+	<section>
+		<div class="view-window" style="background-image:url('img/bg_water.jpg')">
+			<div class="content container">
+				<h2>Our Story</h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+				<button>Learn more</button>
+			</div>
+		</div>
+
+	</section>
+
+
+	<!-- ============== our Story ============== -->
+
+
+
+	<!-- ============== our Story ============== -->
+
+
+	<!-- ============== Footer ============== -->
+
+        <footer>
+            <div class="container">
+                <P class="copyright">Copyright © 2018 by LohanLee. All rights reserved.</P>
+            </div>
+        </footer> 
+	
+</body>
+</html>
