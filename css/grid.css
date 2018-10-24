@@ -1,5 +1,6 @@
 :root {
 	--gutter-size:20px;
+	--gutter-size-small:5px;
 }
 
 /* The grid class is only used when a child row is a gutters */
@@ -17,6 +18,11 @@
 	margin-left:calc(-1 * var(--gutter-size));
 	margin-right:calc(-1 * var(--gutter-size));
 }
+.row.gutters-small {
+	margin-top:calc(-2 * var(--gutter-size-small));
+	margin-left:calc(-1 * var(--gutter-size-small));
+	margin-right:calc(-1 * var(--gutter-size-small));
+}
 
 /* Columns should always have a row parent, and always add up to 12 */
 [class*='col-'] {
@@ -26,6 +32,11 @@
 	margin-top:calc(2 * var(--gutter-size));
 	padding-left:var(--gutter-size);
 	padding-right:var(--gutter-size);
+}
+.gutters-small>[class*='col-'] {
+	margin-top:calc(2 * var(--gutter-size-small));
+	padding-left:var(--gutter-size-small);
+	padding-right:var(--gutter-size-small);
 }
 
 /* Small sizes always exist */
@@ -64,6 +75,14 @@
 }
 .col-sm-12 {
 	width:100%;
+}
+
+
+.col-sm-1fifth {
+	width:20%;
+}
+.col-sm-2fifth {
+	width:40%;
 }
 
 /* Medium Breakpoint */

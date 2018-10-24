@@ -1,10 +1,25 @@
 @charset "utf-8";
 
+body {
+	background-color:#fafafa;
+	font-family: 'Lato', sans-serif;
+	font-size: 100%;
+	color: #333;
+}
+
+h2{
+	text-align: center;
+	font-size: 2em;
+	margin-top: 1em;
+	margin-bottom: 1.2em;
+	font-weight: normal;
+}
+
 /* Cart item -- large screen columns positioned scattered */
-/* default cart item main components style*/
+/* default cart item main components style, 5 columns each cart item row */
 .shopping_cart_item.cart_container {
 	word-wrap: break-word;
-	padding: 15px 5px 130px 4%;
+	padding: 15px 5px 5px 4%;
 	border-bottom: 1px solid #cccccc;
 	margin-right: 5%;
 }
@@ -37,6 +52,10 @@
 	margin-left: 20px;
 }
 
+.qty-text {
+	text-align: center;
+}
+
 /* subtotal section */
 #shopping_cart .subtotal-price {
 	font-weight: bold;
@@ -46,85 +65,73 @@
 	color: red;
 }
 
-/* Cart item -- mid screen columns adjustment */
+/* Cart item -- 4 columns in cart item row */
 @media only screen and (min-width: 600px) and (max-width: 700px) {
 	#shopping_cart .cart-image {
-		float:left;
-		margin-right:2%;
 		width: 120px;
 	}
 
 	#shopping_cart .subtotal-price {
-		font-weight: bold;
 		float: left;
-		margin-top:  5px;
 		margin-left: 20px;
-		font-size: 16px;
-		color: red;
 	}
 }
 
-/* Cart item -- small screen columns adjustment */
-@media only screen and (min-width: 300px) and (max-width: 600px) {
+/* Cart item -- 3 columns in cart item row */
+@media only screen and (min-width: 550px) and (max-width: 600px) {
 	#shopping_cart .cart-image {
-		float:left;
-		margin-right:2%;
 		width: 120px;
+		margin-right:0px;
 	}
 
 	#shopping_cart .subtotal-price {
-		font-weight: bold;
-		float: left;
-		margin-top:  5px;
 		margin-left: 20px;
-		font-size: 16px;
-		color: red;
+	}
+
+	#shopping_cart .unit-price,
+	#shopping_cart .quatity,
+	#shopping_cart .subtotal-price{
+		float: right;
+		clear: right;
 	}
 }
 
 
 /* Cart item -- tiny screen columns adjustment */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 550px) {
 	#shopping_cart .cart-image {
 		float:center;
-		margin-right:2%;
-		left: 50px;
-		width: calc(100% - 100px);
+		left: 20px;
+		width: calc(100% - 40px);
 	}
 
-	#shopping_cart .product-desc {
-		font-weight: bold;
-		float:left;
-		padding:2px 2px 0;
+	#shopping_cart .product-desc,
+	#shopping_cart .brand,
+	#shopping_cart .remove,
+	.product-desc-list {
+		text-align: center;
+		margin: 0px;
+		margin-left: -5%;
+		padding: 0px;
 	}
 
-	#shopping_cart .unit-price {
-		font-weight: bold;
-		float: left;
-		margin-top:  5px;
-		margin-left: 15px;
-		font-size: 15px;
-		color: grey;
-		padding-bottom: 20px;
-	}
-
+	#shopping_cart .unit-price,
 	#shopping_cart .quatity {
-		float: left;
-		margin-top:  5px;
-		margin-left: 20px;
+		text-align: center;
+		margin: 0px;
+		margin-left: -10%;
+		padding-top: 5px;
 	}
 
-	/* subtotal section */
 	#shopping_cart .subtotal-price {
-		font-weight: bold;
-		float: right;
-		margin-top:  5px;
-		font-size: 16px;
-		color: red;
+		text-align: center;
+		margin: 0px;
+		margin-right: 8%;
+		margin-left: -5%;
+		padding-top: 5px;
+		padding-bottom: 5px;
 	}
 }
-
-
 
 /* product desc column */
 #shopping_cart .brand {
@@ -193,8 +200,6 @@
 @media only screen and (max-width: 700px) {
 	#shopping_cart .checkoutcont {
 		text-align: center;
-		/*width: 30%;*/
-		/*margin-right: 10%;*/
 	}
 
 	.checkout-partial-price {
@@ -214,20 +219,26 @@
 
 /* Checkout button style -- overwrite the one in theme.css */
 .button{
-	width: 138px;
-	height: 50px;
-	line-height: 50px;
-	border-radius: 10%;
-	border: 1px solid #fe7121;
-	text-align: center;
-	margin:1em auto;
-	font-weight: 900;
-	font-size: 1.5em;
-	-webkit-transition: color 0.4s;
-	-o-transition: color 0.4s;
-	-moz-transition: color 0.4s;
-	color: #fe7121;
-	background-color: #fff;
+	margin: 0 auto;
+	margin-top: 1.8em;
+	margin-bottom: 2.5em;
+	padding:0;
+	 outline: none;
+	 width: 135px;
+	 height: 45px;
+	 line-height: 43px;
+	 text-align: center;
+	 background-color: #fedadc;
+	 border-radius: 50px;
+	 border: 1px solid transparent;
+	 font-size: 1em;
+	 cursor: pointer;
+	 transition: background-color .2s;
+}
+
+.button:hover{
+	background-color: #f9d6d8;
+
 }
 
 /* Hover effect for the links*/
@@ -238,4 +249,44 @@
 #shopping_cart .remove:hover {
 	opacity: 0.5;
 	filter: alpha(opacity=50);
+}
+
+/* customized grid definition */
+@media (max-width:550px)  {
+	.col-tn-1 {
+		width:calc((1/12) * 100%);
+	}
+	.col-tn-2 {
+		width:calc((2/12) * 100%);
+	}
+	.col-tn-3 {
+		width:25%;
+	}
+	.col-tn-4 {
+		width:calc((4/12) * 100%);
+	}
+	.col-tn-5 {
+		width:calc((5/12) * 100%);
+	}
+	.col-tn-6 {
+		width:50%;
+	}
+	.col-tn-7 {
+		width:calc((7/12) * 100%);
+	}
+	.col-tn-8 {
+		width:calc((8/12) * 100%);
+	}
+	.col-tn-9 {
+		width:75%;
+	}
+	.col-tn-10 {
+		width:calc((10/12) * 100%);
+	}
+	.col-tn-11 {
+		width:calc((11/12) * 100%);
+	}
+	.col-tn-12 {
+		width:100%;
+	}
 }

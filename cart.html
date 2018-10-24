@@ -5,69 +5,99 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>FunBeauty</title>
 	<!-- My Css Library generic-->
-	<link rel="stylesheet" type="text/css" href="common.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+
 	<!-- specific to this project -->
-	<link rel="stylesheet" type="text/css" href="theme.css">
-	<link rel="stylesheet" type="text/css" href="grid.css">
-	<link rel="stylesheet" type="text/css" href="cart.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/cart.css">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
+
+	<!-- Outer resource -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 	<link href="https://unpkg.com/ionicons@4.1.1/dist/css/ionicons.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="js/cart.js"></script>
 </head>
 <body>
-	<!-- ============== Header ============== -->
+
+
+<!-- ============== Header ============== -->
 	<div class="headerWrap">
-		<div class="free_shipping">
-			<div class=" container flex-parent flex-center">
-				<p class="flex-child">
-					FREE STANDARD SHIPPING ON ORDERS $30+
-				</p>
-				<nav class="nav flex-none">
-					<ul class="flex-parent">
-						<li><a href="#">Log in</a></li>
-						<li><a href="#">Cart</a></li>
-					</ul>
-				</nav>
-			</div>
+		<div  class="free_shipping">
+			<p class="flex-child">
+				FREE STANDARD SHIPPING ON ORDERS $30+
+			</p>
 		</div>
 
-		<header>
+		<header class="brand_buy">
 			<div class="container flex-parent flex-center">
-				<img src="img/logo.png" class="logo">
+				<div class="flex-child flex-parent">
+					<a href="main.html" style="margin-left: 0;"><img src="img/logo.png" class="logo"></a>
+					<h1>FunBeauty</h1>
+				</div>
 
-				<h1 class="flex-child">FunBeauty</h1>
+				<div class="flex-none flex-parent">
+					<div class="user" style="margin-right: 2em;">
+						<i class="icon ion-md-person" style="font-size: 1.5em; margin-right: .3em;"></i>	
+						Log in				
+					</div>
 
-				<nav class="nav flex-none">
-					<ul class="flex-parent">
-						<li><a href="#">SHOP ALL</a></li>
-						<li><a href="#">BRANDS</a></li>
-						<li><a href="#">ABOUT US</a></li>
-					</ul>
-				</nav>
+
+					<div class="cart-value">
+						<a href="cart.html" style="margin-left: 0;">
+						<i class="icon ion-md-cart" style="font-size: 1.5em; margin-right: .3em;"></i> 
+						Cart
+						</a>					
+					</div>
+
+				</div>
 			</div>
 		</header>
+
+	</div>
+
+
+	<!-- ============== Start Navigation ============== -->
+ 
+	<input type="checkbox" id="menu" style="display: none;" name="">
+	<label for="menu"><i class="icon ion-md-menu"></i></label>
+
+	<div class="nav_menu">
+		<nav>
+			<ul class="menu">
+				<li><a href="product_list.html">SHOP ALL</a></li>
+				<li><a href="#">SALES</a></li>
+				<li><a href="#">BRANDS</a></li>
+				<li><a href="#">BEAUTY BLOG</a></li>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#" style="margin-right: 0;">SEARCH<i class="icon ion-md-search" style="font-size: 1.4em; margin-left: .5em;"></i></a></li>
+			</ul>		
+		</nav>
 	</div>
 
 
 	<!-- ============== Basket List ============== -->
 	<div id="shopping_cart" class="clearfix">
-		<h2>Your Shopping Cart <i class="fa fa-shopping-cart"></i></h2>
+		<h2>Your Shopping Cart</h2>
 	<hr>
 	<div class="col-lg-12 grid gutter">
 		<ul>
-			<!-- each item of shopping cart -->
+			<!-- each item of shopping cart 1 -->
 			<li class="item-row">
-				<div class="shopping_cart_item cart_container">
+				<div class="shopping_cart_item cart_container clearfix">
 					<!-- item image -->
-					<div class="col-md-2">
+					<div class="col-md-2 col-tn-12">
 					<a href="TODO-item-link" title="">
 						<img class="cart-image" src="img/product1.png" alt="TODO-fill-in-name">
 					</a>
 					</div>
 
 					<!-- item description title and brand-->
-					<div class="product-desc col-md-3">
-					<ul>
+					<div class="product-desc col-md-3 col-tn-12">
+					<ul class="product-desc-list">
 					<li class="product-title">
 						<a href="TODO-item-link">Coconut Cleansing Oil 1</a> 
 					</li>
@@ -77,19 +107,19 @@
 					</div>
 
 					<!-- unit-price -->
-					<div class="unit-price col-md-2">
+					<div class="unit-price col-md-2 col-tn-12">
 						<span class="unit-price-text">121.35</span>
 					</div>
 
 					<!-- Quantity -->
-					<div class="quatity col-md-2">
-						<i class="fa fa-minus"></i>
-						<input class="qty-text" value=3 type="text" size="3"></input>
-						<i class="fa fa-plus"></i>
+					<div class="quatity col-md-2 col-tn-12">
+						<i class="fa fa-minus qty-change-minus"></i>
+						<input class="qty-text" value=3 size="3"></input>
+						<i class="fa fa-plus qty-change-plus"></i>
 					</div>
 
 					<!-- subtotal-price -->
-					<div class="subtotal-price col-md-2">
+					<div class="subtotal-price col-md-2 col-tn-12">
 						<span class="subtotal-price-text">364.05</span>
 					</div>
 
@@ -98,17 +128,17 @@
 
 			<!-- each item of shopping cart 2 -->
 			<li class="item-row">
-				<div class="shopping_cart_item cart_container">
+				<div class="shopping_cart_item cart_container clearfix">
 					<!-- item image -->
-					<div class="col-md-2 col-sm-4">
+					<div class="col-md-2 col-tn-12">
 					<a href="TODO-item-link" title="">
 						<img class="cart-image" src="img/product2.png" alt="TODO-fill-in-name">
 					</a>
 					</div>
 
 					<!-- item description title and brand-->
-					<div class="product-desc col-md-3 col-sm-4">
-					<ul>
+					<div class="product-desc col-md-3 col-tn-12">
+					<ul class="product-desc-list">
 					<li class="product-title">
 						<a href="TODO-item-link">Coconut Cleansing Oil 1</a> 
 					</li>
@@ -118,19 +148,19 @@
 					</div>
 
 					<!-- unit-price -->
-					<div class="unit-price col-md-2 col-sm-4">
+					<div class="unit-price col-md-2 col-tn-12">
 						<span class="unit-price-text">50.00</span>
 					</div>
 
 					<!-- Quantity -->
-					<div class="quatity col-md-2 col-sm-4">
-						<i class="fa fa-minus"></i>
+					<div class="quatity col-md-2 col-tn-12">
+						<i class="fa fa-minus qty-change-minus"></i>
 						<input class="qty-text" value=1 type="text" size="3"></input>
-						<i class="fa fa-plus"></i>
+						<i class="fa fa-plus qty-change-plus"></i>
 					</div>
 
 					<!-- subtotal-price -->
-					<div class="subtotal-price col-md-2 col-sm-4">
+					<div class="subtotal-price col-md-2 col-tn-12">
 						<span class="subtotal-price-text">50.00</span>
 					</div>
 
@@ -139,17 +169,17 @@
 
 			<!-- each item of shopping cart 3 -->
 			<li class="item-row">
-				<div class="shopping_cart_item cart_container">
+				<div class="shopping_cart_item cart_container clearfix">
 					<!-- item image -->
-					<div class="col-md-2">
+					<div class="col-md-2 col-tn-12">
 					<a href="TODO-item-link" title="">
 						<img class="cart-image" src="img/product3.png" alt="TODO-fill-in-name">
 					</a>
 					</div>
 
 					<!-- item description title and brand-->
-					<div class="product-desc col-md-3">
-					<ul>
+					<div class="product-desc col-md-3 col-tn-12">
+					<ul class="product-desc-list">
 					<li class="product-title">
 						<a href="TODO-item-link">Coconut Cleansing Oil 1</a> 
 					</li>
@@ -159,19 +189,19 @@
 					</div>
 
 					<!-- unit-price -->
-					<div class="unit-price col-md-2">
+					<div class="unit-price col-md-2 col-tn-12">
 						<span class="unit-price-text">20.50</span>
 					</div>
 
 					<!-- Quantity -->
-					<div class="quatity col-md-2">
-						<i class="fa fa-minus"></i>
+					<div class="quatity col-md-2 col-tn-12">
+						<i class="fa fa-minus qty-change-minus"></i>
 						<input class="qty-text" value=5 type="text" size="3"></input>
-						<i class="fa fa-plus"></i>
+						<i class="fa fa-plus qty-change-plus"></i>
 					</div>
 
 					<!-- subtotal-price -->
-					<div class="subtotal-price col-md-2">
+					<div class="subtotal-price col-md-2 col-tn-12">
 						<span class="subtotal-price-text">102.5</span>
 					</div>
 
@@ -182,31 +212,13 @@
 		</ul>
 	</div>
 	<div class="checkoutcont">
-			<div class="checkout-partial-price">Subtotal $516.50 USD</div>
-			<div class="checkout-partial-price">Estimated Tax $36.42 USD </div>
-			<div class="checkout-total-price">Total Price $552.92 USD </div>
+			<div class="checkout-partial-price">Subtotal $<span id="checkout-subtotal">516.50<span/> USD</div>
+			<div class="checkout-partial-price">Estimated Tax $<span id="checkout-tax">36.42<span/> USD </div>
+			<div class="checkout-total-price">Total Price $<span id ="checkout-total">552.92<span/> USD </div>
 			<input type="submit" id="pl-font-regular" class="button large" name="checkout" value="Checkout">
 	</div>
 	</div>
 
-
-	<!-- ============== Our Story ============== -->
-	<section>
-		<div class="view-window" style="background-image:url('img/bg_water.jpg')">
-			<div class="content container">
-				<h2>Our Story</h1>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-				<button>Learn more</button>
-			</div>
-		</div>
-
-	</section>
-
-
-	<!-- ============== our Story ============== -->
-
-
-	<!-- ============== our Story ============== -->
 
 
 	<!-- ============== Footer ============== -->

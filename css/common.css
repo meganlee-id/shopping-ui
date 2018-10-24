@@ -11,6 +11,7 @@ body{
 	margin:0;
 	font-family: "Georgia", serif;
 	font-size: 100%;
+	color: #333;
 }
 
 h1{
@@ -47,14 +48,24 @@ p{
 	max-width: 1200px;
 	margin-right: auto;
 	margin-left: auto;
+	vertical-align: middle;
 }
 
-
-.flex-parent{
-	display: flex;
+.media-image {
+	max-width:100%;
+	vertical-align: middle;
 }
 
-.flex-child{
+.nav-crumbs ul,
+.nav-tabs ul,
+.nav-pills ul,
+.nav-horizontal ul,
+.flex-parent {
+	display:flex;
+}
+.nav-tabs li,
+.nav-stretch li,
+.flex-child {
 	flex: 1 1 auto;
 }
 
@@ -72,8 +83,15 @@ p{
 }
 
 
+
+.nav-horizontal li {
+	text-align:center;
+}
+
+
+
 .view-window{
-	height: 30vh;
+	height: 35vh;
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
@@ -116,6 +134,14 @@ p{
 }
 
 
+/* Store Class */
+::-moz-selection { 
+    background: #ffedaf;
+}
+
+::selection {
+    background: #ffedaf;
+}
 
 
 

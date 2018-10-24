@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color:#fafafa;
+	font-family: 'Lato', sans-serif;
+	font-size: 100%;
+	color: #333;
+}
+
+
+/*================= Cart =================*/
+
+.cart-value {
+	position:relative;
+}
+
+.cart-value span {
+	position:absolute;
+	top:-0.5em;
+	right:-1em;
+	font-size:0.8em;
+	background-color:#f2c666;
+	color:black;
+	border-radius:1em;
+	width:1.3em;
+	height:1.3em;
+	line-height:1.3em;
+	text-align:center;
+}
+
+/*================= product_info =================*/
+
+.product {
+	position:relative;
+	overflow:hidden;
+}
+.product-description {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(255,255,255,0.3);
+	transform:translateY(100%);
+	transition:all 0.3s;
+}
+.product:hover .product-description {
+	transform:translateY(0);
+}
+
+.centered-child{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+button{
+	font-size: .9em;
+	margin:0;
+	padding:0;
+	outline: none;
+	width: 135px;
+	height: 45px;
+	background-color: #fedadc;
+	border-radius: 50px;
+	border: 1px solid transparent;
+	cursor: pointer;
+}
+
+
+
+/*================= Banner =================*/
+
+.banner{
+	background-color: lightyellow;
+}
+
+
+/*================= BreadCrumbs =================*/
+
+
+
+/*================= Recommend Product =================*/
+
+
+h2{
+	text-align: center;
+	font-size: 1.6em;
+	margin-top: 1em;
+	margin-bottom: 1.2em;
+	font-weight: normal;
+}
+
+h5{
+	margin:.8em 0 .5em;
+}
+
+div.name_price:hover{
+	color: #666;
+	cursor: pointer;
+}
+
+.container_theme{
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+.grid .product{
+	text-align: center;
+}
+
