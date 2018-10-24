@@ -56,19 +56,80 @@ body {
 	transform: translate(-50%,-50%);
 }
 
-button{
-	font-size: .9em;
-	margin:0;
-	padding:0;
-	outline: none;
-	width: 135px;
-	height: 45px;
-	background-color: #fedadc;
-	border-radius: 50px;
-	border: 1px solid transparent;
-	cursor: pointer;
+.row-style {
+	margin-right: 0px;
+	padding-right: 0px !important;
 }
 
+.pos-gutters {
+	margin-top:calc(1 * var(--gutter-size));
+	margin-left:calc(1 * var(--gutter-size));
+	margin-right:calc(1 * var(--gutter-size));
+}
+
+/*================= Button and Fav =================*/
+.add-button {
+	margin-left:calc(1 * var(--gutter-size));
+	float:left;
+}
+
+.button {
+	margin-top: .5em;
+	margin-bottom: 2.5em;
+	padding:0;
+	outline: none;
+	width: 150px;
+	height: 45px;
+	line-height: 42px;
+	text-align: center;
+	background-color: #fedadc;
+	border-radius: 50px;
+	border: 2px solid transparent;
+	font-size: 1em;
+	transition: background-color .3s, border 0.3s;
+}
+
+.like-it {
+	margin-left: 10em;
+	margin-top: 30px;
+}
+
+.like-text {
+	margin-top: 5px;
+	color: grey;
+}
+
+.heart-list {
+	padding-top: 2px;
+}
+
+label {
+	font-size: 1.5em;
+	color: #cccccc;
+}
+
+.button:hover{
+	line-height: 42px;
+	background-color: #fff;
+	border: 2px solid #fedadc;
+}
+
+a:hover {
+	background-color: #fff;
+	border: 2px solid #fedadc;
+	opacity: 0.6;
+}
+
+.hidden {
+	display:none;
+}
+
+.toggle {
+	display:inline-block;
+}
+.toggle.fav>input:checked+label {
+	color:red;
+}
 
 
 /*================= Banner =================*/
@@ -79,7 +140,9 @@ button{
 
 
 /*================= BreadCrumbs =================*/
-
+.breadcrumbs {
+	padding: 15px;
+}
 
 
 /*================= Recommend Product =================*/
@@ -113,3 +176,137 @@ div.name_price:hover{
 	text-align: center;
 }
 
+.product-details {
+	word-wrap: break-word;
+}
+
+.prd-name {
+	color: #ac3b3bb0;
+	font-weight:600;
+	font-size: 25px;
+}
+
+.prd-price {
+	float: left;
+	color: grey;
+	font-size: 20px;
+	font-weight:800;
+}
+
+.single-option-selector {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	background-color: rgb(248, 248, 248);
+	border-width: 1px;
+	border-style: solid;
+	border-color: grey;
+	border-image: initial;
+	height: 35px;
+}
+
+option {
+	font-size: 18px;
+}
+
+@media only screen and (max-width: 700px) {
+	.pos-gutters {
+		margin-top: 5px;
+	}
+	.single-option-selector {
+		margin-top: 10px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.media-image {
+		width: 100%;
+	}
+	.single-option-selector {
+		margin-top: 3px;
+		margin-bottom: 15px;
+	}
+}
+
+hr {
+	margin: 20px;
+}
+
+
+/*=========== Carousel/slideshow ===========*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+	float: left;
+}
+
+
+.mySlides {
+	display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: grey;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.dots {
+	padding-top: 5px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	cursor: pointer;
+	height: 10px;
+	width: 10px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}

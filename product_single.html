@@ -10,8 +10,8 @@
 
 	<!-- specific to this project -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/product_single.css">
 	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/product_single.css">
 
 	<!-- Outer resource -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
@@ -20,6 +20,7 @@
 	<!-- JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="js/interactivity.js"></script>
+	<script src="js/single-product.js"></script>
 	
 </head>
 <body>
@@ -83,36 +84,109 @@
 	
 	<div class="breadcrumbs">
 		<div class="container">
-			<a href="">HOME</a>
-			<a href="">SKINCARE</a>
+			<a href="">HOME > </a>
+			<a href="">SKINCARE > </a>
 			<a href="">Clearup White Mousse</a>
 		</div>
 	</div>
 
 
+	<div class="container_theme clearfix">
+		<div class="row">
+			<!-- Single product images -->
+			<div class="col-sm-12 col-md-6 col-lg-5 slideshow-container">
+				<!-- slides -->
+				<div class="mySlides fade" style="display: block">
+				<img class="media-image" src="img/sp1.png" style="width:100%">
+				</div>
 
+				<div class="mySlides fade">
+				<img class="media-image" src="img/sp2.png" style="width:100%">
+				</div>
+
+				<div class="mySlides fade">
+				<img class="media-image" src="img/sp3.jpg" style="width:100%">
+				</div>
+				
+				<!-- next and previous buttons -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<!-- The dots/circles -->
+				<div class="dots" style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span> 
+				<span class="dot" onclick="currentSlide(2)"></span> 
+				<span class="dot" onclick="currentSlide(3)"></span> 
+				</div>
+			</div>
+
+
+
+
+			<!-- Single product details -->
+			<div class="col-sm-12 col-md-6 col-lg-7 row-style">
+				<h3 class="pos-gutters prd-name">Yuja Water C Serum</h3>
+				<h4 class="pos-gutters prd-price" id="price-tag">$1.99</h4>
+
+				<select class="single-option-selector" data-option="option1" id="product-select-option-0">
+					<option value="0">Sample</option>
+					<option value="1">Size: 0.5oz/15ml</option>
+					<option value="2">Size: 1oz/30ml</option>
+					<option value="3">Size: 2oz/60ml</option>
+					<option value="4">Size: 5oz/150ml</option>
+				</select>
+
+				<p class="product-details pos-gutters">Lorem ipsum dolor sit amet, consectetur adipiing elit. Quos vitae facilis accusantium iure maxime ipsa fugit aspernatur dolores tempora praesentium cupiditate vero, </p>
+
+				<div class="container clearfix">
+				<button class="button add-button">Add To Cart</button>
+					<div class="like-it">
+						<ul class="heart-list">
+							<li class="toggle fav">
+								<input type="checkbox" id="toggle-1" class="hidden" checked>
+								<label for="toggle-1">&hearts;</label>
+							</li>
+							<li>
+								<span class="like-text">Like it</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
 
 	<!-- ============== Recommend Products ============== -->
+	<hr/>
 	<h2>Recommend Products</h2>
 
 	<section class="container_theme">
 		<div class="grid">
 			<div class="row gutters">
-				<div class="col-sm-12 col-md-6 col-lg-4">
+				<div class="col-sm-12 col-md-6 col-lg-3">
 					<div class="product">
 						<img src="img/recommend.png" class="media-image">
 						<h5>Toner</h5>
 						<span>$39.00</span>
 					</div>
 				</div>
-				<div class="col-sm-12 col-md-6 col-lg-4">
+				<div class="col-sm-12 col-md-6 col-lg-3">
 					<div class="product">
 						<img src="img/recommend.png" class="media-image">
 						<h5>Toner</h5>
 						<span>$39.00</span>
 					</div>
 				</div>
-				<div class="col-sm-12 col-md-6 col-lg-4">
+				<div class="col-sm-12 col-md-6 col-lg-3">
+					<div class="product">
+						<img src="img/recommend.png" class="media-image">
+						<h5>Toner</h5>
+						<span>$39.00</span>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-3">
 					<div class="product">
 						<img src="img/recommend.png" class="media-image">
 						<h5>Toner</h5>
@@ -129,7 +203,7 @@
 
         <footer>
             <div class="container">
-                <P class="copyright">Copyright © 2018 by LohanLee. All rights reserved.</P>
+                <p class="copyright">Copyright © 2018 by LohanLee. All rights reserved.</p>
             </div>
         </footer> 
 	
