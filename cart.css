@@ -1,6 +1,7 @@
 @charset "utf-8";
-/* CSS Document */
 
+/* Cart item -- large screen columns positioned scattered */
+/* default cart item main components style*/
 .shopping_cart_item.cart_container {
 	word-wrap: break-word;
 	padding: 15px 5px 130px 4%;
@@ -8,18 +9,10 @@
 	margin-right: 5%;
 }
 
-
 #shopping_cart .cart-image {
 	float:left;
 	margin-right:2%;
 	width: 110px;
-}
-
-
-#shopping_cart .cart-image:hover {
-	/* opacity with hover*/
-	opacity: 0.5;
-	filter: alpha(opacity=50);
 }
 
 #shopping_cart .product-desc {
@@ -38,34 +31,102 @@
 	padding-bottom: 20px;
 }
 
-#shopping_cart .subtotal-price {
-	font-weight: bold;
-	float: left;
-	margin-top:  5px;
-	margin-left: 20px;
-	font-size: 16px;
-	color: red;
-}
-
-.unit-price-text::before { 
-	content: "Price: $";
-}
-
-.subtotal-price-text::before { 
-	content: "Subtotal: $";
-}
-
 #shopping_cart .quatity {
 	float: left;
 	margin-top:  5px;
 	margin-left: 20px;
 }
 
-#shopping_cart .product-title:hover {
-	opacity: 0.5;
-	filter: alpha(opacity=50);
+/* subtotal section */
+#shopping_cart .subtotal-price {
+	font-weight: bold;
+	float: right;
+	margin-top:  5px;
+	font-size: 16px;
+	color: red;
 }
 
+/* Cart item -- mid screen columns adjustment */
+@media only screen and (min-width: 600px) and (max-width: 700px) {
+	#shopping_cart .cart-image {
+		float:left;
+		margin-right:2%;
+		width: 120px;
+	}
+
+	#shopping_cart .subtotal-price {
+		font-weight: bold;
+		float: left;
+		margin-top:  5px;
+		margin-left: 20px;
+		font-size: 16px;
+		color: red;
+	}
+}
+
+/* Cart item -- small screen columns adjustment */
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+	#shopping_cart .cart-image {
+		float:left;
+		margin-right:2%;
+		width: 120px;
+	}
+
+	#shopping_cart .subtotal-price {
+		font-weight: bold;
+		float: left;
+		margin-top:  5px;
+		margin-left: 20px;
+		font-size: 16px;
+		color: red;
+	}
+}
+
+
+/* Cart item -- tiny screen columns adjustment */
+@media only screen and (max-width: 300px) {
+	#shopping_cart .cart-image {
+		float:center;
+		margin-right:2%;
+		left: 50px;
+		width: calc(100% - 100px);
+	}
+
+	#shopping_cart .product-desc {
+		font-weight: bold;
+		float:left;
+		padding:2px 2px 0;
+	}
+
+	#shopping_cart .unit-price {
+		font-weight: bold;
+		float: left;
+		margin-top:  5px;
+		margin-left: 15px;
+		font-size: 15px;
+		color: grey;
+		padding-bottom: 20px;
+	}
+
+	#shopping_cart .quatity {
+		float: left;
+		margin-top:  5px;
+		margin-left: 20px;
+	}
+
+	/* subtotal section */
+	#shopping_cart .subtotal-price {
+		font-weight: bold;
+		float: right;
+		margin-top:  5px;
+		font-size: 16px;
+		color: red;
+	}
+}
+
+
+
+/* product desc column */
 #shopping_cart .brand {
 	margin-top: 10px;
 	font-size: 13px;
@@ -80,29 +141,13 @@
 	cursor: pointer;
 }
 
-#shopping_cart .remove:hover {
-	opacity: 0.5;
-	filter: alpha(opacity=50);
-}
-
+/* quantity section */
 .fa-minus {
 	color: #DB7093;
 }
 
-.fa-minus:hover {
-	/* opacity with hover*/
-	opacity: 0.5;
-	filter: alpha(opacity=50);
-}
-
 .fa-plus {
 	color: #DB7093;
-}
-
-.fa-plus:hover {
-	/* opacity with hover*/
-	opacity: 0.5;
-	filter: alpha(opacity=50);
 }
 
 .qty-text {
@@ -112,8 +157,17 @@
 	font-size: 15px;
 }
 
-/* Checkout Section -- large screen */
-@media only screen and (min-width: 600px) {
+/* price prefix */
+.unit-price-text::before { 
+	content: "Price: $";
+}
+
+.subtotal-price-text::before { 
+	content: "Subtotal: $";
+}
+
+/* Checkout Section -- large screen positioned at right side */
+@media only screen and (min-width: 700px) {
 	#shopping_cart .checkoutcont {
 		float: right;
 		text-align: right;
@@ -135,8 +189,8 @@
 	}
 }
 
-/* Checkout Section -- small screen */
-@media only screen and (max-width: 600px) {
+/* Checkout Section -- small screen positioned at center */
+@media only screen and (max-width: 700px) {
 	#shopping_cart .checkoutcont {
 		text-align: center;
 		/*width: 30%;*/
@@ -158,6 +212,7 @@
 }
 
 
+/* Checkout button style -- overwrite the one in theme.css */
 .button{
 	width: 138px;
 	height: 50px;
@@ -175,6 +230,12 @@
 	background-color: #fff;
 }
 
-
-
-
+/* Hover effect for the links*/
+.fa-minus:hover, 
+.fa-plus:hover, 
+#shopping_cart .cart-image:hover,
+#shopping_cart .product-title:hover,
+#shopping_cart .remove:hover {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
